@@ -9,12 +9,12 @@ import Sidebar from "./components/Sidebar";
 // const steps = [{ id: 1, component: <StepOne /> }];
 function App() {
   return (
-    <div className="flex items-center  h-screen justify-center ">
-      <div className="md:block hidden my-4  sidebar basis-[30%] h-screen ">
+    <div className="flex items-center  h-screen justify-center md:flex-row flex-col  overflow-y-scroll ">
+      <div className="  sidebar basis-[30%] ">
         <Sidebar />
       </div>
-      <div className="md:basis-[70%]  h-full   ">
-        <div className=" md:w-[80%] mx-auto mt-[9%] w-[90%]">
+      <div className="md:basis-[70%] flex h-full items-center justify-center">
+        <div className=" md:w-[80%] mx-auto mt-[9] w-[90%]">
           <StepOne />
           {/* <StepTwo />
           <StepThree />
