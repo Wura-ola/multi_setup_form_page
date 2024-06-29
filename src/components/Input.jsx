@@ -8,6 +8,7 @@ function Input(props) {
       placeholder={props.placeholder}
       onChange={props.handleChange}
       name={props.name}
+      id={props.id}
     />
   );
 }
