@@ -9,6 +9,9 @@ function Input(props) {
       onChange={props.handleChange}
       name={props.name}
       id={props.id}
+      value={props.value}
+      onFocus={props.onFocus}
+      onBlur={props.onBlur}
     />
   );
 }

@@ -4,7 +4,7 @@ import Button from "./Button";
 function SidebarStep(props) {
   return (
     <div>
-      <div className="flex mt-5 gap-5">
+      <div className="flex mt-10 gap-5">
         <Button
           className=" rounded-full w-[45px]  text-primaryMarineBlue bg-PrimaryLightBlue"
           text={props.value}
