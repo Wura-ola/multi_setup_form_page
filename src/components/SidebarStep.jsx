@@ -6,6 +6,10 @@ function SidebarStep(props) {
     <div>
       <div className="flex mt-10 gap-5">
         <Button
+          onClick={() => {
+            console.log("button click");
+            return props.updateStepNumber(2);
+          }}
           className=" rounded-full w-[45px]  text-primaryMarineBlue bg-PrimaryLightBlue"
           text={props.value}
         />

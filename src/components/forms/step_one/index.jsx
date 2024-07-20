@@ -7,7 +7,7 @@ import Button from "../../Button";
 //   email: "",
 //   phone: "",
 // };
-function StepOne() {
+function StepOne(props) {
   // const [values, setValues] = useState(initialValues);
   // const [error, setError] = useState();
 
@@ -107,6 +107,7 @@ function StepOne() {
       console.log("Form is valid");
       // handle form submission
     }
+    props.updateStepNumber(2);
   };
   return (
     <div>
