@@ -5,6 +5,7 @@ function Button(props) {
     <button
       className={props.className}
       type={props.type ? props.type : "button"}
+      {...props}
     >
       {props.text}
     </button>

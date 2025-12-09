@@ -1,9 +1,32 @@
 .sidebar {
   background-image: url(./assets/images/bg-sidebar-desktop.svg);
-  /* background-repeat: no-repeat; */
   background-size: cover;
   background-position: 100% 100%;
   width: 100%;
-  /* background-color: red; */
-  height: 100%;
+  min-height: 100%;
+  /* border-radius: 16px; */
+  overflow: hidden;
+}
+
+@media screen and (max-width: 425px) {
+  .sidebar {
+    background-image: url(./assets/images/bg-sidebar-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    width: 100%;
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* border-radius: 0; */
+  }
+  .sidebarstep {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    gap: 0.9rem;
+  }
 }
