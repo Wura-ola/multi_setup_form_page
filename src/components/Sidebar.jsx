@@ -11,6 +11,7 @@ function Sidebar(props) {
           heading="STEP 1"
           info=" YOUR INFO "
           updateStepNumber={props.updateStepNumber}
+          stepNumber={props.stepNumber}
         />
 
         <SidebarStep
@@ -18,6 +19,7 @@ function Sidebar(props) {
           heading="STEP 2"
           info=" SELECT PLAN "
           updateStepNumber={props.updateStepNumber}
+          stepNumber={props.stepNumber}
         />
 
         <SidebarStep
@@ -25,19 +27,37 @@ function Sidebar(props) {
           heading="STEP 3"
           info=" ADD-ONS "
           updateStepNumber={props.updateStepNumber}
+          stepNumber={props.stepNumber}
         />
         <SidebarStep
           value="4"
           heading="STEP 4"
           info=" SUMMARY "
           updateStepNumber={props.updateStepNumber}
+          stepNumber={props.stepNumber}
         />
       </div>
       <div className="md:hidden sidebarstep flex gap-4 px-6 py-6">
-        <SidebarMobile value="1" updateStepNumber={props.updateStepNumber} />
-        <SidebarMobile value="2" updateStepNumber={props.updateStepNumber} />
-        <SidebarMobile value="3" updateStepNumber={props.updateStepNumber} />
-        <SidebarMobile value="4" updateStepNumber={props.updateStepNumber} />
+        <SidebarMobile
+          value="1"
+          updateStepNumber={props.updateStepNumber}
+          stepNumber={props.stepNumber}
+        />
+        <SidebarMobile
+          value="2"
+          updateStepNumber={props.updateStepNumber}
+          stepNumber={props.stepNumber}
+        />
+        <SidebarMobile
+          value="3"
+          updateStepNumber={props.updateStepNumber}
+          stepNumber={props.stepNumber}
+        />
+        <SidebarMobile
+          value="4"
+          updateStepNumber={props.updateStepNumber}
+          stepNumber={props.stepNumber}
+        />
       </div>
     </div>
   );

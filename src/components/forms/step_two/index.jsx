@@ -1,13 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import Card from "../../Card";
 import arcade from "../../../assets/images/icon-arcade.svg";
 import advanced from "../../../assets/images/icon-advanced.svg";
 import pro from "../../../assets/images/icon-pro.svg";
 import Footer from "../../Footer";
 
-function StepTwo({ stepNumber, updateStepNumber, previousStepNumber }) {
-  const [billingCycle, setBillingCycle] = useState("monthly");
-
+function StepTwo({
+  stepNumber,
+  updateStepNumber,
+  previousStepNumber,
+  billingCycle,
+  setBillingCycle,
+}) {
   const plans = [
     {
       id: "arcade",
@@ -36,7 +40,7 @@ function StepTwo({ stepNumber, updateStepNumber, previousStepNumber }) {
       <p className="text-coolGray tracking-wider leading-6">
         You have the option of monthly or yearly billing.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mt-6 md:mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 mt-6 md:mt-10">
         {plans.map((plan) => (
           <Card
             key={plan.id}

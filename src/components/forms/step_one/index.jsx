@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Input from "../../Input";
 import Button from "../../Button";
+import Footer from "../../Footer";
 
 // const initialValues = {
 //   name: "",
@@ -102,12 +103,10 @@ function StepOne(props) {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    if (e) e.preventDefault();
     if (validate()) {
-      console.log("Form is valid");
-      // handle form submission
+      props.updateStepNumber(2);
     }
-    props.updateStepNumber(2);
   };
   return (
     <div>
@@ -164,14 +163,15 @@ function StepOne(props) {
         />
         {/* <p className="text-red-500">{error}</p> */}
         {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
-        <div className="flex justify-end pt-20">
-          <Button
-            className=" bg-primaryMarineBlue text-PrimaryLightBlue  px-3 py-2 rounded"
-            text="Next Step"
-            type="submit"
-          />
-        </div>
+        <div className="pb-24 md:pb-0" />
       </form>
+      <Footer
+        stepNumber={1}
+        updateStepNumber={props.updateStepNumber}
+        previousStepNumber={props.previousStepNumber}
+        onNext={handleSubmit}
+        hideBack
+      />
     </div>
   );
 }
